@@ -36,6 +36,7 @@ document.getElementById("hold").onclick = function () {
   document.querySelector(".score-" + player).textContent = score[player];
   if (score[player] > 100) {
     alert("Congratulations Player " + (player + 1));
+    window.location.reload();
   } else {
     document.querySelector(".current-" + player).textContent = 0;
     document.querySelector(".player-0").classList.toggle("active");
