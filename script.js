@@ -48,6 +48,7 @@ document.getElementById("hold").onclick = function () {
 };
 
 document.getElementById("btnNewGame").onclick = function () {
+  window.location.reload();
   let score = [0, 0];
   let roundScore = 0;
   let current = 0;
