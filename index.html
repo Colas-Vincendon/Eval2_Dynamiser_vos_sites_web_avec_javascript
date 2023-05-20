@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiceGame</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="row text-center"><h1>Jeu de Dés</h1></div>
+        <div class="row justify-content-center">
+          <img id="logoGame" src="./images/logoGame.png" alt="logo dice Game" />
+        </div>
+        <div class="row justify-content-center">
+          <button class="btn" id="btnNewGame">Nouvelle partie</button>
+        </div>
+        <div class="row">
+          <!-- -------------------- Column Player 1 --------------------- -->
+          <div class="col col-12 col-sm-4 text-center">
+            <div class="player-0 box-player active">
+              <h2 id="pl-0">Player 1</h2>
+              <div>
+                <h3>Score</h3>
+                <h5 id="totalScorePlayer-0" class="score-0">0</h5>
+              </div>
+            </div>
+            <div class="currentScore-0 active boxCurrentScore">
+              <h4>Current Score</h4>
+              <h5 class="current-0">0</h5>
+            </div>
+          </div>
+          <!-- ----------------------- Column Game ------------------------ -->
+          <div class="col col-12 col-sm-4 text-center">
+            <div class="row">
+              <img
+                id="dice-img"
+                class="imgDice mx-auto py-2"
+                src="./images/dice-1.png"
+                alt="a dice"
+              />
+            </div>
+            <div id="launchDice" class="row">
+              <button class="btn mx-auto">Launch Dice</button>
+            </div>
+            <div class="row">
+              <button id="hold" class="btn mx-auto">Hold points</button>
+            </div>
+          </div>
+          <!-- -------------------- Column Player 2 ----------------------- -->
+          <div class="col col-12 col-sm-4 text-center">
+            <div class="player-1 box-player">
+              <h2 id="player2">Player 2</h2>
+              <div>
+                <h3>Score</h3>
+                <h5 id="totalScorePlayer-1" class="score-1">0</h5>
+              </div>
+            </div>
+            <div class="currentScore-1 boxCurrentScore">
+              <h4>Current Score</h4>
+              <h5 class="current-1">0</h5>
+            </div>
+          </div>
+          <!-- -------------------------- Row Rules ------------------------ -->
+          <div class="col col-12 text-center">
+            <button
+              class="btn mx-auto"
+              id="btnRules"
+              role="button"
+              data-bs-toggle="modal"
+              data-bs-target="#rules"
+            >
+              Rules
+            </button>
+          </div>
+          <div
+            class="modal fade"
+            id="rules"
+            tabindex="-1"
+            aria-labelledby="rules"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div id="modalWindow" class="modal-content">
+                <div class="modal-body color">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="modal-title" id="rulesLabel">
+                      <u>Règles du jeu</u>
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <p>
+                    Le jeu comprend 2 joueurs sur un seul et même écran.<br />
+                    Chaque joueur possède un score temporaire (Current Score) et
+                    un score total(Score).<br />
+                    <br />
+                    À chaque tour, le joueur lance un dé autant de fois qu'il le
+                    souhaite.<br />
+                    Le résultat d’un lancer est ajouté au score temporaire
+                    (Current Score).<br />
+                    S’il obtient un 1, son score temporaire est perdu et c’est
+                    la fin de son tour.<br />
+                    <br />
+                    Lors de son tour, le joueur peut décider à tout moment
+                    de:<br />
+                    - Cliquer sur l’option “Hold points”, qui permet d’envoyer
+                    les points du score temporaire (Current Score) vers le score
+                    total.<br />
+                    Ce sera alors au tour de l’autre joueur. <br />
+                    <br />
+                    Le premier joueur qui atteint les 100 points sur score total
+                    gagne la partie.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"
+      ></script>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

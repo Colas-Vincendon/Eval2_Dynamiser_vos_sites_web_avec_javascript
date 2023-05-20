@@ -1,0 +1,83 @@
+body {
+  font-family: "Lato", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: brown;
+  color: bisque;
+}
+
+header {
+  margin-top: 20px;
+}
+
+#logoGame {
+  width: auto;
+  height: 200px;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: bisque;
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  background-color: rgb(99, 36, 36);
+}
+
+#btnNewGame,
+#btnRules {
+  width: 150px;
+}
+
+h1 {
+  color: bisque;
+  font-size: 60px;
+}
+
+.imgDice {
+  height: 100px;
+  width: auto;
+}
+
+.active {
+  color: #f2af29;
+}
+
+.box-player {
+  margin: auto;
+  background-color: black;
+  border-radius: 5px;
+  height: 130px;
+  max-height: 130px;
+  border: 1px solid rgb(245, 208, 106);
+  max-width: 400px;
+}
+
+.boxCurrentScore {
+  margin: auto;
+  margin-top: 10px;
+  background-color: rgb(110, 30, 30);
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid rgb(245, 208, 106);
+  max-width: 400px;
+}
+
+h2,
+h4 {
+  margin-top: 5px;
+}
+
+#modalWindow {
+  background-color: rgb(51, 5, 5);
+}
+
+@media screen and (max-width: 575px) {
+  .box-player,
+  .boxCurrentScore {
+    width: 200px;
+  }
+}
